@@ -87,12 +87,6 @@ def getMode(table):
     return modes
 
 
-filename = "q2.csv"
-data = getDataFromCSV(filename)
-print("Mean : ", getMean(data))
-print("Median : ", getMedian(data))
-print("Mode : ", getMode(data))
-
 def checkEmpiricalRule(data):
     mean = getMean(data)
     median = getMedian(data)
@@ -103,6 +97,12 @@ def checkEmpiricalRule(data):
         return True
     else:
         return False
-    
-    
-print(f"Empirical rule : {"Satisfied" if checkEmpiricalRule(data) else "Not satisfied"}")
+
+
+if __name__ == "__main__":
+    filename = "q2.csv"
+    data = getDataFromCSV(filename)
+    print("Mean : ", getMean(data))
+    print("Median : ", getMedian(data))
+    print("Mode : ", getMode(data))
+    print(f"Empirical rule : {"Satisfied" if checkEmpiricalRule(data) else "Not satisfied"}")

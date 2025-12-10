@@ -7,6 +7,7 @@ def getMean(nums):
     else:
         return 0
 
+
 def getMode(nums):
     count = {}
     for i in nums:
@@ -27,6 +28,7 @@ def getMode(nums):
             
     return modes
 
+
 def getMedian(nums):
     nums.sort()
     n = len(nums)
@@ -34,9 +36,10 @@ def getMedian(nums):
         return getMean([nums[int((n/2)-1)],nums[int(n/2)]])
     else:
         return nums[math.floor(n/2)]
-    
-nums = [1,2,3,4,5,6]
 
-print("Mean : ",getMean(nums))
-print("Median : ",getMedian(nums))
-print("Mode(s) : ",getMode(nums))
+if __name__ == "__main__":
+    nums = [1,2,3,4,5,6]
+
+    print("Mean : ",getMean(nums))
+    print("Median : ",getMedian(nums))
+    print("Mode(s) : ",getMode(nums))
